@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBPS CSA-XV Recruitment 2026-27</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #1c1c1e;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 414px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #007AFF, #0051D5);
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 134px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .card-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #007AFF, #0051D5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1c1c1e;
+        }
+
+        .date-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 0.5px solid #f2f2f7;
+        }
+
+        .date-item:last-child {
+            border-bottom: none;
+        }
+
+        .date-label {
+            font-size: 14px;
+            color: #8e8e93;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .date-value {
+            font-size: 14px;
+            color: #1c1c1e;
+            font-weight: 600;
+            text-align: right;
+            flex: 1;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #FF3B30, #D70015);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .eligibility-item {
+            padding: 16px 0;
+            border-bottom: 0.5px solid #f2f2f7;
+        }
+
+        .eligibility-item:last-child {
+            border-bottom: none;
+        }
+
+        .eligibility-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #007AFF;
+            margin-bottom: 8px;
+        }
+
+        .eligibility-desc {
+            font-size: 14px;
+            color: #48484a;
+            line-height: 1.4;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 0.5px solid #f2f2f7;
+        }
+
+        .process-step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #34C759, #248A3D);
+            color: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: #1c1c1e;
+            line-height: 1.4;
+            padding-top: 2px;
+        }
+
+        .fee-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .fee-item {
+            background: #f2f2f7;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .fee-category {
+            font-size: 12px;
+            color: #8e8e93;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .fee-amount {
+            font-size: 16px;
+            color: #007AFF;
+            font-weight: 700;
+        }
+
+        .exam-section {
+            background: #f2f2f7;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+
+        .exam-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 12px;
+        }
+
+        .exam-detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .exam-detail:last-child {
+            margin-bottom: 0;
+        }
+
+        .exam-label {
+            font-size: 14px;
+            color: #48484a;
+        }
+
+        .exam-value {
+            font-size: 14px;
+            color: #1c1c1e;
+            font-weight: 600;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #007AFF, #0051D5);
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, #FF9500, #FF6D00);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .vacancy-banner {
+            background: linear-gradient(135deg, #34C759, #248A3D);
+            color: white;
+            padding: 16px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .vacancy-number {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .vacancy-text {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>IBPS CSA-XV</h1>
+            <p>Customer Service Associates 2026-27</p>
+        </div>
+
+        <div class="content">
+            <div class="vacancy-banner">
+                <div class="vacancy-number">10,277</div>
+                <div class="vacancy-text">Total Vacancies Available</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📅</div>
+                    <div class="card-title">Important Dates</div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Application Start</div>
+                    <div class="date-value">August 1, 2025</div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Application Last Date</div>
+                    <div class="date-value">August 28, 2025 <span class="highlight">Extended</span></div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Fee Payment</div>
+                    <div class="date-value">Aug 1 - 28, 2025</div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Edit Window</div>
+                    <div class="date-value">Sep 2 - 3, 2025</div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Preliminary Exam</div>
+                    <div class="date-value">Oct 4, 5, 11, 2025</div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Main Examination</div>
+                    <div class="date-value">Nov 29, 2025</div>
+                </div>
+                
+                <div class="date-item">
+                    <div class="date-label">Provisional Allotment</div>
+                    <div class="date-value">March 2026</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">✓</div>
+                    <div class="card-title">Eligibility Criteria</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Age Limit</div>
+                    <div class="eligibility-desc">Between 20-28 years as of August 1, 2025. Age relaxation applicable for reserved categories.</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Education</div>
+                    <div class="eligibility-desc">Bachelor's Degree in any discipline from a recognized University or equivalent qualification.</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Computer Literacy</div>
+                    <div class="eligibility-desc">Operating and working knowledge of computer systems is mandatory. Certificate/Diploma/Degree in computer operations required.</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Local Language</div>
+                    <div class="eligibility-desc">Proficiency in specified local language of the State/UT including reading, writing, speaking and understanding.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📝</div>
+                    <div class="card-title">Application Process</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-desc">Register on official IBPS website (www.ibps.in) with basic details</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-desc">Upload scanned images of photograph, signature, thumb impression, and handwritten declaration</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-desc">Fill personal and educational details, select state and bank preferences</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-desc">Pay application fee online</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-desc">Download and save application form and e-receipt</div>
+                </div>
+                
+                <div class="fee-grid">
+                    <div class="fee-item">
+                        <div class="fee-category">SC/ST/PwBD/ESM/DESM</div>
+                        <div class="fee-amount">₹175</div>
+                    </div>
+                    <div class="fee-item">
+                        <div class="fee-category">General/OBC/EWS</div>
+                        <div class="fee-amount">₹850</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Exam Pattern</div>
+                </div>
+                
+                <div class="exam-section">
+                    <div class="exam-title">Preliminary Examination</div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Duration:</span>
+                        <span class="exam-value">1 Hour (20 min/section)</span>
+                    </div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Total Marks:</span>
+                        <span class="exam-value">100</span>
+                    </div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Sections:</span>
+                        <span class="exam-value">English, Numerical, Reasoning</span>
+                    </div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Negative Marking:</span>
+                        <span class="exam-value">0.25 per wrong answer</span>
+                    </div>
+                </div>
+                
+                <div class="exam-section">
+                    <div class="exam-title">Main Examination</div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Duration:</span>
+                        <span class="exam-value">2 Hours 40 Minutes</span>
+                    </div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Total Marks:</span>
+                        <span class="exam-value">200</span>
+                    </div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Sections:</span>
+                        <span class="exam-value">4 Sections</span>
+                    </div>
+                    <div class="exam-detail">
+                        <span class="exam-label">Negative Marking:</span>
+                        <span class="exam-value">0.25 per wrong answer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="new-badge">NEW</div>
+                <div class="card-header">
+                    <div class="card-icon">🔥</div>
+                    <div class="card-title">Latest Updates</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Extended Deadline</div>
+                    <div class="eligibility-desc">Application deadline extended to August 28, 2025</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Correction Window</div>
+                    <div class="eligibility-desc">September 2-3, 2025 for application modifications (₹200 fee)</div>
+                </div>
+                
+                <div class="eligibility-item">
+                    <div class="eligibility-title">Total Vacancies</div>
+                    <div class="eligibility-desc">10,277 positions across various public sector banks</div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="window.open('https://www.ibps.in', '_blank')">
+                Apply Now on IBPS Website
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Add some iOS-like interactions
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+                this.style.transition = 'transform 0.1s ease';
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>
